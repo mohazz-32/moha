@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | RAADSAN Construction</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Registration Form Container */
+        .registration-container {
+            background: linear-gradient(90deg, #1f2937, #2c3e50);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 215, 0, 0.9); /* Gold color for heading */
+        }
+
+        .registration-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .registration-container input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .registration-container input:focus {
+            outline: none;
+            border-color: rgba(255, 215, 0, 0.9);
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .registration-container button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: rgba(255, 215, 0, 0.9);
+            color: #1f2937;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .registration-container button:hover {
+            background-color: rgba(255, 215, 0, 1);
+            transform: scale(1.05);
+        }
+
+        .error {
+            color: rgba(255, 99, 71, 1); /* Red for error text */
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .success {
+            color: rgba(60, 179, 113, 1); /* Green for success */
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="registration-container">
+    <h2>Register</h2>
+    <form id="registrationForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+
+        <p class="error" id="errorMessage"></p>
+        <p class="success" id="successMessage"></p>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script>
+    // JavaScript for Registration Form
+    const form = document.getElementById('registrationForm');
+    const errorMessage = document.getElementById('errorMessage');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Clear previous messages
+        errorMessage.textContent = '';
+        successMessage.textContent = '';
+
+        // Validation checks
+        if (username === '' || email === '' || password === '' || confirmPassword === '') {
+            errorMessage.textContent = 'All fields are required!';
+            return;
+        }
+
+        if (!/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+            errorMessage.textContent = 'Invalid email format!';
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            errorMessage.textContent = 'Passwords do not match!';
+            return;
+        }
+
+        if (password.length < 6) {
+            errorMessage.textContent = 'Password must be at least 6 characters long!';
+            return;
+        }
+
+        // Success Message
+        successMessage.textContent = 'Registration successful!';
+        form.reset();
+
+        // Simulate a submission event
+        setTimeout(() => {
+            successMessage.textContent = '';
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>

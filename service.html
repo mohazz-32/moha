@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | RAADSAN Construction</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(90deg, #1f2937, #2c3e50);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+            margin: 1rem auto;
+            max-width: 90%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 215, 0, 0.8);
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 215, 0, 1);
+            transform: scale(1.1);
+        }
+
+        /* Page Container */
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem 0;
+            flex-grow: 1;
+        }
+
+        .services-container h1 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-container p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        /* Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #1f78d1, #0f4c75);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card button {
+            padding: 0.8rem 1.5rem;
+            background-color: rgba(255, 215, 0, 0.9);
+            color: #1f2937;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .service-card button:hover {
+            background-color: rgba(255, 215, 0, 1);
+        }
+
+        /* Footer Styling */
+        footer {
+background-color: #1f2937;
+width: 100%;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #fcbf12;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e09b00;
+        }
+
+        /* Modal Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RAADSAN Construction</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="abou.html">About</a>
+        <a href="regestration .html">Regester</a>
+        <a href="service.html">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="mission.html">Mission</a>
+        <a href="mission.html">vission</a>
+    </nav>
+</header>
+
+<div class="services-container">
+    <h1>Our Services</h1>
+    <p>Explore the wide range of construction and development services we offer to meet your needs.</p>
+
+    <div class="services-grid">
+        <div class="service-card" data-service="Residential Construction">
+            <h2>Residential Construction</h2>
+            <p>We build homes that reflect your dreams, offering unmatched quality and attention to detail.</p>
+        </div>
+
+        <div class="service-card" data-service="Commercial Development">
+            <h2>Commercial Development</h2>
+            <p>We design and build cutting-edge commercial spaces that inspire businesses to grow.</p>
+        </div>
+
+        <div class="service-card" data-service="Infrastructure Projects">
+            <h2>Infrastructure Projects</h2>
+            <p>From roads to bridges, we deliver infrastructure projects that drive communities forward.</p>
+        </div>
+
+        <div class="service-card" data-service="Renovations & Remodeling">
+            <h2>Renovations & Remodeling</h2>
+            <p>Transform your spaces with our expert renovation and remodeling services.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 RAADSAN Construction | <a href="contactus.html">Contact Us</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RAADSAN Construction</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #1f2937, #2c3e50); /* Gradient background */
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+            margin: 1rem auto;
+            max-width: 90%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 215, 0, 0.8); /* Soft gold */
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255, 215, 0, 1); /* Brighter gold */
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, #fcbf12, #e09b00); /* Bright construction gradient */
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.5s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        .about {
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.5s ease-in-out;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .about p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Video Section */
+        .video {
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.5s ease-in-out;
+        }
+        .video video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RAADSAN Construction</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="abou.html">About</a>
+        <a href="regestration .html">Regester</a>
+        <a href="service.html">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="mission.html">Mission</a>
+        <a href="mission.html">vission</a>
+    </nav>
+</header>
+
+<section class="hero" id="hero">
+    <h1>About Us</h1>
+    <p>Discover our story, our mission, and our commitment to excellence.</p>
+</section>
+
+<section class="about" id="about">
+    <h2>Who We Are</h2>
+    <p>
+        RAADSAN Construction was founded in 2005 with the vision of building modern, sustainable, and innovative structures. Over the years, we have become a trusted name in the industry, delivering top-notch services in residential, commercial, and infrastructure projects.
+    </p>
+</section>
+
+<section class="video" id="video">
+    <h2>Our Journey</h2>
+    <!-- Replace 'your-video.mp4' with the path to your local video file -->
+    <video autoplay loop muted>
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<footer>
+    <p>© 2025 RAADSAN Construction. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Animation Trigger on Scroll
+    document.addEventListener("scroll", () => {
+        const elements = document.querySelectorAll(".hero, .about, .video");
+        elements.forEach(el => {
+            const position = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (position < windowHeight - 100) {
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

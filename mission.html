@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission and Vision - RAADSAN Construction</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #1f2937, #2c3e50);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+            margin: 1rem auto;
+            max-width: 90%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 215, 0, 0.8);
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255, 215, 0, 1);
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, #fcbf12, #e09b00);
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Section Styles */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem auto;
+            max-width: 1200px;
+            gap: 2rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+            background-color: #f8f9fa;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .section img, .section video {
+            width: 50%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section img, .section video {
+                width: 100%;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RAADSAN Construction</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="abou.html">About</a>
+        <a href="regestration .html">Regester</a>
+        <a href="service.html">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#">Mission & vission</a>
+        <a href="mission.html">Mission</a>
+
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Our Mission & Vision</h1>
+    <p>Learn about the driving force behind RAADSAN Construction.</p>
+</section>
+
+<section class="section">
+    <div>
+        <h2>Our Mission</h2>
+        <p>
+            At RAADSAN Construction, our mission is to deliver high-quality, sustainable, and innovative construction solutions that exceed our clients' expectations while fostering long-term partnerships based on trust and excellence.
+        </p>
+    </div>
+    <video autoplay loop muted>
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section class="section">
+    <video autoplay loop muted>
+        <source src="vid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div>
+        <h2>Our Vision</h2>
+        <p>
+            Our vision is to be a global leader in the construction industry, shaping the future with innovative technologies and sustainable practices while contributing positively to the communities we serve.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 RAADSAN Construction. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
